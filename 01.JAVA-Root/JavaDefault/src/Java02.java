@@ -12,51 +12,51 @@ public class Java02 {
          [ Java 변수 유형 ]
 
             1. String
-            - "Hello"와 같은 텍스트를 저장 문자열 값은 큰따옴표사용!
+            - "Hello"와 같은 텍스트를 저장 문자열 값은 큰따옴표사용
             2. int
             - 123 또는 -123과 같이 소수 없이 정수(정수)를 저장
             3. float
             - 19.99 또는 -19.99와 같은 소수를 사용. 
                 부동 소수점 숫자를 저장
             4. char
-            - 'a' 또는 'B'와 같은 단일 문자를 저장. Char 값은 작은따옴표사용!
+            - 'a' 또는 'B'와 같은 단일 문자를 저장. Char 값은 작은따옴표사용
             5. boolean
             - true / false          
          */
         // 1. 문자형
-        String nameKim  = "김석구 멋쨍이~!";
+        String nameKim  = "김석구 멋쨍이";
         System.out.println(nameKim);
 
         // 2. 정수형
         int myNum = 1000;
-        System.out.println(myNum+"라인의 코딩을 짬!");
+        System.out.println(myNum+"라인의 코딩을 짬");
 
-        // 기존 변수에 다른 값이 덮어써짐!
+        // 기존 변수에 다른 값이 덮어써짐
         myNum = 2000;
-        System.out.println(myNum+"라인의 코딩을 짬!");
+        System.out.println(myNum+"라인의 코딩을 짬");
 
-        // 자바에서 상수는? 변수선언 앞에 final키워드 사용!
+        // 자바에서 상수는? 변수선언 앞에 final키워드 사용
         final int newNum = 7000;
-        // newNum = 8000; 에러남! 재할당불가!
-        System.out.println(newNum+"라인을 또 짬!");
+        // newNum = 8000; 에러남 재할당불가
+        System.out.println(newNum+"라인을 또 짬");
 
-        // 변수와 문자와의 결합 : (+) 연산자 사용!
+        // 변수와 문자와의 결합 : (+) 연산자 사용
         String nameTom = "톰 행크스";
-        System.out.println("안녕~! "+nameTom);
+        System.out.println("안녕~ "+nameTom);
 
         String familyName = "김씨";
         String myName = "오룡";
         String fullName = familyName + myName;
         System.out.println(fullName);
 
-        // 변수를 한번에 선언과 할당!
+        // 변수를 한번에 선언과 할당
         int x = 5, y = 6, z = 50;
         System.out.println(x+"와"+y+"와"+z+"의 합은? "
         +(x+y+z));
 
-        // 이런방식도 있어~!
+        // 이런방식도 있어~
         // 같은 형의 변수를 한꺼번에 선언하고
-        // 같은 값을 여러 같은 형의 변수에 넣을때!
+        // 같은 값을 여러 같은 형의 변수에 넣을때
         int xx, yy, zz;
         xx = yy = zz = 50;
         System.out.println(xx+"를 세번더하면? "+(xx+yy+zz));
@@ -105,10 +105,10 @@ public class Java02 {
             int iamInt = 5; // int형
             float iamFloat = 5.99f; // float형
             char iamChar = 'D'; // char형
-            // -> "D"라고 쌍따옴표를 쓰면 에러!
-            // 한글자 전용 홑따옴표만 쓸 수 있음!!!
+            // -> "D"라고 쌍따옴표를 쓰면 에러
+            // 한글자 전용 홑따옴표만 쓸 수 있음
             boolean iamBoolean = true; // boolean형
-            String iamString = "안뇽~!"; // String형
+            String iamString = "안뇽~"; // String형
 
             System.out.println("난정수: "+iamInt);
             System.out.println("난실수: "+iamFloat);
@@ -122,7 +122,7 @@ public class Java02 {
             System.out.println("[데이터형별 크기체크]");
             // 1. byte : -128 ~ 127
             byte numByte = -128; 
-            // -129 와 같이 범위밖은 에러!
+            // -129 와 같이 범위밖은 에러
             System.out.println("byte: "+ numByte);
 
             // 2. short : -32,768 ~ 32,767 
@@ -139,21 +139,21 @@ public class Java02 {
             // 세부범위: -9,223,372,036,854,775,808 ~ 
             //          9,223,372,036,854,775,807
             // 특이사항 -> 범위안의 숫자일 지라도 끝에 L
-            // 표시를 하지 않으면 int형 상수로 처리한다!
-            // int범위를 벗어나는 에러가 발생한다!
-            // 끝에 L자를 써줘야 한다(소문자l도 가능 but헷갈림!)
+            // 표시를 하지 않으면 int형 상수로 처리한다
+            // int범위를 벗어나는 에러가 발생한다
+            // 끝에 L자를 써줘야 한다(소문자l도 가능 but헷갈림)
             long numLong = 9223372036854775807L;
             System.out.println("long: "+numLong);
 
             // 5. float : 소수 자릿수 6 ~ 7
-            // 특이사항 : 숫자데이터 끝에 F로 처리해야 같은형임!
-            // 소수점 아래 넘치는 경우 7째 자리에서 반올림함!
+            // 특이사항 : 숫자데이터 끝에 F로 처리해야 같은형임
+            // 소수점 아래 넘치는 경우 7째 자리에서 반올림함
             float numFloat = 5.12345678F; // 결과: 5.123457
             System.out.println("float: "+numFloat);
 
             // 6. double : 소수 자릿수 15
-            // 특이사항 : 숫자데이터 끝에 D로 처리해야 같은형임!
-            // float이나 double은 근사값이므로 끝자리수가 달라질 수 있음!
+            // 특이사항 : 숫자데이터 끝에 D로 처리해야 같은형임
+            // float이나 double은 근사값이므로 끝자리수가 달라질 수 있음
             double numDouble = 7.123456789123456789123456D;
             System.out.println("double: "+numDouble);
 
@@ -164,7 +164,38 @@ public class Java02 {
             System.out.println("거듭제곱 출력: \n"+ f1 + "\n" + d1);
             // \(역슬래쉬)n 은 줄바꿈기호
 
+            System.out.println();
+            System.out.println("[불린값 출력]");
+            // 불린값 (true/false)
+            boolean isJavaFun = true;
+            boolean isFishTasty = false;
+            System.out.println("자바는 재밌나"+(isJavaFun?"응":"아니"));
+            System.out.println("자바는 재밌나"+isJavaFun);
+            System.out.println("맛있나"+isFishTasty);
+            System.out.println("맛있나"+(isFishTasty?"매우":"별로"));
 
+            // char 데이터 유형은 단일문자를 저장
+            // 문자는 'A' 또는 'c'와 같이 작은따옴표 사용 필수
+            System.out.println();
+            System.out.println("[char 값 출력]");
+            char myGrade = 'B';
+            System.out.println("나의 학점은"+myGrade);
+
+            // 한글과 같은 2byte 문자도 한글자만 출력
+            char myMedal = '금';
+            System.out.println("나의 메달은"+myMedal);
+
+            // 아스키코드를 사용하여 출력가능
+            // char형에 아스키코드에 해당하는 숫자를 넣으면 한글자 출력
+            // 아스키코드 참조: https://www.w3schools.com/charsets/ref_html_ascii.asp
+            System.out.println();
+            char myVar1 = 64, myVar2 = 66, myVar3 = 67;
+            System.out.println("아스키64는"+myVar1);
+            System.out.println("아스키66는"+myVar2);
+            System.out.println("아스키67는"+myVar3);
+
+
+    
 
 
 
@@ -201,5 +232,22 @@ public class Java02 {
             기본이 아닌 유형의 예로는 
             Strings / Arrays / Classes / Interface 등이 있음
           ********************************************/
+
+        /* 
+        [ 데이터 형변환 ]
+	
+        형변환은 기본 데이터 유형의 값을 다른 유형에 할당하는것
+        Java에는 두 가지 유형의 캐스팅이 있음
+
+        1.업캐스팅 (자동) 
+        - 더 작은 유형을 더 큰 유형 크기로 변환
+        byte-> short-> char-> int-> long-> float->double
+
+        2.다운캐스팅 (수동) 
+        - 큰 유형을 작은 크기 유형으로 변환
+        double-> float-> long-> int-> char-> short->byte
+        */
+
+        
     }
 }
