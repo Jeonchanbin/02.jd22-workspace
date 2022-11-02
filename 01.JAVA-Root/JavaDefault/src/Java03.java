@@ -158,5 +158,9 @@ public class Java03 {
         // 4. Math.abs(x) - 절대값
         System.out.println("1000원이 있는데 10000을 썼다. 순수차액은 얼마?"+Math.abs(1000-10000)+"원");
         // 5. Math.random() - 0.0(포함)과 1.0(제외) 사이의 난수
+        // System.out.println(
+        //     "1~5 사이의 난수는?"+Math
+        // );
     }
+    
 }
