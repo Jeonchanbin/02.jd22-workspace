@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Java04 {
     public static void main(String[] args) {
         // [Java 조건 및 If 문]
@@ -10,21 +12,56 @@ public class Java04 {
         // (4) 이상: a >= b
         // (5) 같음: a == b
         // (6) 다름: a != b
+            // Scanner를 사용하여 입력데티어 받기
+            // java.util.Scanner를 import하여 사용함
+            // 자동import 단축키: alt+shift+O
+            // 스캐너 생성시 값으로 System.in을 설정하여
+            // 입라인이 생성되게 한다
 
-        // 2. if문 
-        // : 조건이 true일때 실행할 코드를 제어함
+        // 스캐너는 메모리 영역을 try문으로 감싸서 관리한다 
+        try (   
+        Scanner myObj = new Scanner(System.in)) {
+            System.out.println("배우의 이름을 입력하시오");
+            // 아래쪽에 입력라인이 생김 
+            // 입력후 입력 데이터를 변수에 할당한다
+            // nextLine 메서드로 입력 라인 전체를 가져옴
+            // next() 메서드는 단어하나를 가져옴 (띄어쓰기 맨앞단어만)
+            String actor = myObj.nextLine(); 
+            System.out.println("배우이름: "+actor);
 
-        // if (조건문) {
-        //     // 실행코드
-        // } else if (조건문) {
-        //     // 실행코드
-        // } else {
-        //     // 실행코드
-        // }
+            // 입력창으로 받은 데이터는 엔터기호등 다른
+            // 데이터가 포함되어 있어서 == 비교연사자로 하지말고 변수.equals(내용) 메서드로 비교하면
+            // 정확히 입력된 데이터만 비교한다
 
-        // if : 지정된 조건이 true인 경우 실행할 코드
-        // else if : 상단 조건이 false인 경우 새로운 조건 추가
-        // else : 모든 조건에 해당없을 경우 실행할 코드
+            // 배우 이름에 해당하는대표작으로 표시하는 if문
+            // if(actor=="공유"){
+            if(actor.equals("공유")){
+                System.out.println("대표작: 도깨비");
+            }//////////// if /////////////////
+            else if(actor.equals("김수현")){
+                System.out.println("대표작: 해품달");
+            }////////////// else if ///////////////////////////
+            else{
+                System.out.println("넌 누구냐");
+            }///////////// else ////////////////
+            //////////////////////////////////////////
+            // 2. if문 
+            // : 조건이 true일때 실행할 코드를 제어함
+    
+            // if (조건문) {
+            //     // 실행코드
+            // } else if (조건문) {
+            //     // 실행코드
+            // } else {
+            //     // 실행코드
+            // }
+    
+            // if : 지정된 조건이 true인 경우 실행할 코드
+            // else if : 상단 조건이 false인 경우 새로운 조건 추가
+            // else : 모든 조건에 해당없을 경우 실행할 코드
+        }
+
+
 
         // 3. 삼항연산자(짧은 if문)
         // 변수 = (조건문) ? true시 실행문 :  false시 실행문;
